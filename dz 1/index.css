@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blue {
+    width: 1000px;
+    height: 500px;
+    background-color: blue;
+}
+
+.yellow {
+    width: 1000px;
+    height: 500px;
+    background-color: yellow;
+}
