@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1400px;
+    height: 500px;
+    background-color: blue;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.yellow {
+    width: 1400px;
+    height: 500px;
+    background-color: yellow;
+}
