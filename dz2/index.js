@@ -1,7 +1,7 @@
-function checkValue(answer) {
-    let correctAnswer = answer;
+function queryCheckValue(answer) {
+    let correctAnswer = Number(answer);
 
-    while (isNaN(Number(correctAnswer))) {
+    while (isNaN(correctAnswer)) {
         correctAnswer = prompt("Try again");
     }
 
@@ -9,26 +9,39 @@ function checkValue(answer) {
 }
 
 let firstValue = prompt("Enter the first value");
-firstValue = checkValue(firstValue);
+firstValue = queryCheckValue(firstValue);
 
 let secondValue = prompt("Enter the second value");
-secondValue = checkValue(secondValue);
+secondValue = queryCheckValue(secondValue);
 
-const symbols = prompt("Choose a symbol +, -, *, /");
+function checkSymbol(answer) {
+    let correctSymbol = answer;
 
-switch (symbols) {
+    while (!(correctSymbol === "+" || correctSymbol === "-" || correctSymbol === "*" || correctSymbol === "/")) {
+        correctSymbol = prompt("Try again");
+    }
+
+    return correctSymbol;
+}
+
+let symbol = prompt("Choose a symbol +, -, *, /");
+symbol = checkSymbol(symbol);
+
+switch (symbol) {
     case "+":
-        alert(`${firstValue} + ${secondValue} = ${Number(firstValue) + Number(secondValue)}`);
+        alert(`${firstValue} + ${secondValue} = ${firstValue + secondValue}`);
         break;
     case "-":
-        alert(`${firstValue} + ${secondValue} = ${Number(firstValue) - Number(secondValue)}`);
+        alert(`${firstValue} + ${secondValue} = ${firstValue - secondValue}`);
         break;
     case "*":
-        alert(`${firstValue} + ${secondValue} = ${Number(firstValue) * Number(secondValue)}`);
+        alert(`${firstValue} + ${secondValue} = ${firstValue * secondValue}`);
         break;
     case "/":
-        alert(`${firstValue} + ${secondValue} = ${Number(firstValue) / Number(secondValue)}`);
+        alert(`${firstValue} + ${secondValue} = ${firstValue / secondValue}`);
         break;
     default:
-        alert("Sorry, your choose is invalid");
+        alert("Sorry, something went wrong");
 }
+
+
