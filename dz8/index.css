@@ -1,0 +1,58 @@
+body {
+    margin: 30px 0 0 100px;
+
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    background-color: #a7e9f1;
+}
+
+.enter-firstValue {
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.enter-secondValue {
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.choose-operator {
+    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.count-button {
+    width: 90px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.count-button:hover {
+    background-color: #f5f508;
+}
+
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
