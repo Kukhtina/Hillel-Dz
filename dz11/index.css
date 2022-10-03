@@ -1,0 +1,42 @@
+body {
+    margin: 30px 0 0 50px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 70px;
+}
+
+#tasksList {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#task {
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.invalid-input {
+    background-color: red;
+}
+
+#addTasks {
+    width: 60px;
+    height: 45px;
+    font-size: 20px;
+}
+
+#addTasks:hover {
+    background-color: yellow;
+}
+
+.task-status {
+    background-color: limegreen;
+}
+
+table, th{
+    border: 1px solid;
+}

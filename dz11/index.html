@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork 11</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <form id="taskForm">
+        <table>
+            <thead class="head">
+            <tr>
+                <th class="title">TO DO LIST</th>
+            </tr>
+            </thead>
+            <tbody id="tasksList"></tbody>
+            <tfoot>
+            <tr>
+                <td><input type="text" id="task"></td>
+                <td>
+                    <button type="submit" id="addTasks">Add</button>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </form>
+    <script type="text/template" id="taskTemplate">
+        <tr class="task-item {{class}}" data-task-id="{{id}}">
+            <td id="taskEl">{{task}}</td>
+            <td>
+                <button type="button" class="deleteBtn">Delete</button>
+            </td>
+        </tr>
+    </script>
+</body>
+</html>
