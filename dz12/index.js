@@ -23,7 +23,6 @@ function Calculator(arg) {
 }
 
 const calc = new Calculator(10);
-calc.result;
 
 calc.sum(5);
 calc.mult(10);
