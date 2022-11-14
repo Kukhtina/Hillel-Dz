@@ -1,0 +1,46 @@
+body {
+    margin:  0;
+}
+
+#container {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid;
+}
+
+.todo-content-container.todo-is-done {
+    background-color: green;
+}
+
+.todo-btn-delete:hover {
+    background-color: red;
+}
+
+.todo-input-container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-input {
+    width: 600px;
+    height: 35px;
+}
+
+.todo-btn-add {
+    width: 70px;
+    height: 41px;
+    margin-left: 3px;
+}
+
+.todo-btn-add:hover {
+    background-color: #f5f508;
+}
