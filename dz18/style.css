@@ -1,0 +1,46 @@
+body {
+    padding: 10px 40px;
+    background-color: whitesmoke;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 3px;
+}
+
+.add-sticker-btn {
+    width: 80px;
+    height: 40px;
+    border: none;
+    font-size: 24px;
+    background-color: lightslategray;
+}
+
+.add-sticker-btn:hover {
+    background-color: green;
+}
+
+.stickers-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sticker-container {
+    display: flex;
+    width: 270px;
+    border: 1px solid;
+    padding: 3px;
+    margin: 10px;
+}
+
+.sticker-delete-btn {
+    float: right;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 3px;
+}
+
+.sticker-delete-btn:hover {
+    background-color: red;
+}
