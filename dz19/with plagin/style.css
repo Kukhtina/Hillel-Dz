@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cards-container {
+    width: calc(100% - 50px);
+}
+
+.slide {
+    padding: 25px;
+}
+
+.slick-center .photo-card .img {
+    transform: scale(1.2);
+    transition: transform 1s ease-in-out;
+}
+
+.photo-card .img {
+    width: 100%;
+    height: 100%;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: dodgerblue;
+}
