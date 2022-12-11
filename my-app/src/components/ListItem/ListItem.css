@@ -1,0 +1,18 @@
+.item {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.item.done{
+    text-decoration: line-through;
+}
+
+.btnDelete {
+    float: right;
+    margin: 0 10px auto;
+}
+
+.btnDelete:hover {
+    background-color: red;
+}
+
