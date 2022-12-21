@@ -1,0 +1,25 @@
+.list-item {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.list-item.done {
+    text-decoration: underline;
+    color: greenyellow;
+}
+
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-del-task {
+    width: 70px;
+    height: 30px;
+}
+
+.btn-del-task:hover {
+    background-color: red;
+}

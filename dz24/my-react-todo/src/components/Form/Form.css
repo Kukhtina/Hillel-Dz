@@ -1,0 +1,34 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.enter-task {
+    width: 400px;
+    height: 37px;
+}
+
+.btn-add-task {
+    width: 75px;
+    height: 42px;
+    margin-left: 5px;
+}
+
+.btn-add-task:hover {
+    background-color: yellow;
+}
+
+.error {
+    display: none;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: red;
+}
