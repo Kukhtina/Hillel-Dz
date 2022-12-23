@@ -1,0 +1,10 @@
+.active-photo {
+    position: fixed;
+    top: 100px;
+    left: 200px;
+}
+
+.act {
+    width: 1000px;
+    height: 700px;
+}
