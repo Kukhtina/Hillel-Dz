@@ -1,0 +1,22 @@
+.items-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-edit {
+    background-color: #f6daa6;
+}
+
+.btn-edit:hover {
+    background-color: #f8bb4a;
+}
+
+.btn-delete {
+    background-color: #f69f9f;
+}
+
+.btn-delete:hover {
+    background-color: #ee6666;
+}

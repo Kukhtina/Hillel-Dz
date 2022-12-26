@@ -1,0 +1,15 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.btn-to-form {
+    width: 60px;
+    height: 40px;
+    background-color: #f3f3a6;
+}
+
+.btn-to-form:hover {
+    background-color: yellow;
+}
