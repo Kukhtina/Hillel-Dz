@@ -1,26 +1,27 @@
-import {Form, Formik} from 'formik';
+import { Avatar, Box, Button, Typography } from '@mui/material';
+import { Form, Formik } from 'formik';
 
-import {TextField, Button, Container, Box, Avatar, Typography} from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-
-
-import {Navigate} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import SuperTextField from '../components/form/SuperTextField';
+import api from '../../../../api';
 import useAuth from '../hooks/useAuth';
 import useIsAuthorized from '../hooks/useIsAuthorized';
 
-const initialValues = {username: '', password: '', role: 'admin'};
+const initialValues = { username: '', password: '' };
 
 function Login() {
-    const {login} = useAuth();
+    const { login } = useAuth();
     const isAuthorized = useIsAuthorized();
 
-    function onSubmit({username, password, role}) {
-        login(username, password, role);
+    function onSubmit({ username, password }) {
+        login(username, password);
     }
 
     return (
-        <Container maxWidth="xs">
-            <Container component="main" maxWidth="xs">
+        <Formik initialValues={initialValues} onSubmit={onSubmit}>
+            <Form noValidate>
+                {isAuthorized && <Navigate replace={true} to="/" />}
                 <Box
                     sx={{
                         marginTop: 8,
@@ -29,64 +30,41 @@ function Login() {
                         alignItems: 'center',
                     }}
                 >
-                    <Avatar sx={{ width: 54, height: 54, m: 1, bgcolor: 'secondary.main' }}>
-                        <LockOutlinedIcon sx={{ width: 34, height: 34}}/>
+                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                        <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        Login
+                        Sign in
                     </Typography>
+                    <Box sx={{ mt: 1 }}>
+                        <SuperTextField
+                            margin="normal"
+                            required
+                            fullWidth
+                            label="Username"
+                            name="username"
+                            autoFocus
+                        />
+                        <SuperTextField
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="password"
+                            label="Password"
+                            type="password"
+                        />
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            sx={{ mt: 3, mb: 2 }}
+                        >
+                            Sign In
+                        </Button>
+                    </Box>
                 </Box>
-            </Container>
-            <Formik initialValues={initialValues} onSubmit={onSubmit}>
-            {({handleChange, values, touched, errors}) => <Form>
-                {isAuthorized && <Navigate replace={true} to="/"/>}
-                <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    label="Username"
-                    id="username"
-                    name="username"
-                    onChange={handleChange}
-                    value={values.username}
-                    error={touched.username && !!errors.username}
-                    helperText={touched.username ? errors.username : undefined}
-                />
-                <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    label="Password"
-                    id="password"
-                    name="password"
-                    onChange={handleChange}
-                    value={values.password}
-                    error={touched.password && !!errors.password}
-                    helperText={touched.password ? errors.password : undefined}
-                />
-                <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    label="Role"
-                    id="role"
-                    name="role"
-                    onChange={handleChange}
-                    value={values.role}
-                    error={touched.role && !!errors.role}
-                    helperText={touched.role ? errors.role : undefined}
-                />
-                <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    sx={{ mt: 3, mb: 2 }}
-                >
-                    Login
-                </Button>
-            </Form>}
+            </Form>
         </Formik>
-        </Container>
     );
 }
 
